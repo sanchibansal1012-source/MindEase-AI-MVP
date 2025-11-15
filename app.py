@@ -2,8 +2,8 @@ import streamlit as st
 from openai import OpenAI
 import datetime
 
-# 🌿 Initialize OpenAI client
-client = OpenAI(api_key="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")   #  ← paste your key here
+# 🔒 Load API key from Streamlit Secrets
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # 🌸 Page setup
 st.set_page_config(page_title="MindEase", page_icon="🌿", layout="centered")
